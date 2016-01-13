@@ -3,7 +3,6 @@
 // 1.ファイルを開く fopen()
 $fileName = "sales.csv";
 
-// $fp = fopen($fileName, "a");
 if (!$fp = fopen($fileName, "r"))
 {
   echo "ファイルを開けませんでした";
@@ -19,38 +18,18 @@ $contents = file($fileName);
 foreach ($contents as $content)
 {
   // var_dump($c) . '<br>';
-
   // echo $c[0];
-
   // $sum += $c[1];
-
   // echo $s . '<br>';
-
-  // var_dump($s);
   $c = explode(',', $content);
 }
 
-  var_dump($c);
-
-  // $member = count($contens);
 $member = count($contents) - 1;
-
-// var_dump($test);
-
-// $data = explode(",", $test);
-
-// var_dump($test) . '<br>';
-
-// $sample = explode(',', $test);
 // var_dump($sample);
-
-// $member = count($test) - 1;
-
 
 echo '社員数:' . $member . '<br>';
 echo '売上合計:' . $total . '<br>';
 echo '売上平均:' . $average ;
-
 
 // 3.ファイルを閉じる fclose()
 fclose($fp);
