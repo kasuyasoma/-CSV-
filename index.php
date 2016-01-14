@@ -28,8 +28,8 @@ $member = count($contents) - 1;
 // var_dump($sample);
 
 echo '社員数:' . $member . '<br>';
-echo '売上合計:' . $total . '<br>';
-echo '売上平均:' . $average ;
+// echo '売上合計:' . $total . '<br>';
+// echo '売上平均:' . $average ;
 
 // 3.ファイルを閉じる fclose()
 fclose($fp);
